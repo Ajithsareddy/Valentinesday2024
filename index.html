@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div id="question">
+        <h1>Will you be my Valentine?</h1>
+        <button id="yesBtn">Yes 😍</button>
+        <button id="noBtn">I don't 🤔</button>
+    </div>
+    <div id="response" class="hidden">
+        <!-- Content changes based on user interaction -->
+    </div>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <!-- Add more as desired -->
+    </div>
+
+    <!-- Initial Choice Modal -->
+    <div id="choiceModal" class="modal hidden">
+        <div class="modal-content">
+            <p>Your phone will be hacked Hehehe, click yes to stop hacking</p>
+            <div id="flexBtn">
+                <button id="modalYes">Yes</button>
+                <button id="modalNo">I don't care still a nooooooooo.........</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countdown Modal -->
+    <div id="countdownModal" class="modal hidden">
+        <div class="modal-content">
+            <p id="countdownMessage">Are you sure? Hacking in <span id="countdown">5</span> seconds...</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
