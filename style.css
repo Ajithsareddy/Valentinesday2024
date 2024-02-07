@@ -1,0 +1,269 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffefff;
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Remove the background-image rule from the body, html selector */
+/* Instead, add a separate div for the background image */
+
+.stars,
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Ensure it's behind content but not interfering with interactivity */
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url('your_background_image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rest of the styles remain the same */
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.star {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+    opacity: 0.4;
+}
+
+.star:nth-child(1) {
+    width: 5px;
+    height: 5px;
+    left: 50%;
+    animation-duration: 7s;
+}
+
+.star:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    left: 70%;
+    animation-duration: 5s;
+}
+
+.star:nth-child(3) {
+    width: 4px;
+    height: 4px;
+    left: 20%;
+    animation-duration: 6s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff9999;
+}
+
+#yesBtn::after {
+    content: '✨';
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.3s;
+}
+
+#yesBtn:hover::after {
+    opacity: 1;
+    top: -45px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff6384;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 2.5em;
+}
+
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#yesBtn {
+    background-color: #ffccd5;
+    color: #fff;
+}
+
+#yesBtn:hover {
+    background-color: #ff99ac;
+    border-color: #ff99ac;
+}
+
+#noBtn {
+    background-color: #ffcccb;
+    color: #fff;
+}
+
+#noBtn:hover {
+    background-color: #ff4444;
+    border-color: #ff4444;
+}
+
+.hidden {
+    display: none;
+}
+
+#response {
+    text-align: center;
+    color: #444;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-out;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+video {
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: 60%;
+}
+
+#noBtn:focus {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(10px, 10px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.loving-message,
+.reconsider-message,
+.picture-display {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    color: #555;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#flexBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
