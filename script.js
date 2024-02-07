@@ -24,7 +24,7 @@ function displayReconsiderMessage() {
 
 function displayPicture() {
     const responseSection = document.getElementById('response');
-    responseSection.innerHTML = '<p>Your phone is hacked, here is a pic from your phone! 😄</p><video controls autoplay loop><source src="video.mp4" type="video/mp4"></video><p>I love you anyhow 😛 Hehehe</p>';
+    responseSection.innerHTML = '<p>Your phone is hacked, here is a pic from your phone! 😄</p><video controls autoplay loop><source src="VID-20240207-WA0000.mp4" type="video/mp4"></video><p>I love you anyhow 😛 Hehehe</p>';
 }
 
 document.getElementById('modalYes').addEventListener('click', function () {
