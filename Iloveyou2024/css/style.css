@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe0f0;
+    color: #333333;
+}
+
+header {
+    background-color: #ff80aa;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1,
+h4 {
+    margin: 0;
+}
+
+header h4 {
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+
+.pretty-pink-button {
+    background-color: #ffe0f0;
+    color: #ff85a2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.pretty-pink-button:hover {
+    background-color: #ff6f91;
+    color: #ffe0f0;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pretty-pink-button:active {
+    background-color: #e65a80;
+    color: #ffe0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pretty-pink-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+    height: 35%;
+}
+
+#train {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: left;
+}
+
+.train_engine,
+.train_bhogi {
+    height: 90%;
+    text-align: center;
+}
+
+.train_engine img,
+.train_bhogi img {
+    height: 100%;
+}
+
+.train_engine {
+    position: relative;
+    will-change: transform;
+    transition: left 3s;
+    left: -12950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.train_engine p {
+    position: absolute;
+    background-image: url('../images/train_heart.webp');
+    background-size: 70px 70px;
+    line-height: 62px;
+    width: 70px;
+    height: 70px;
+    color: #E75480;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.train_bhogi {
+    position: relative;
+    will-change: transform;
+    transition: left 2s;
+}
+
+footer {
+    background-color: #ff80aa;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3%;
+}
+
+footer div img {
+    width: 2%;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #ffe0f0;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    background-image: url('../images/heart_footer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    will-change: transform;
+    opacity: 0;
+}
+
+#heart-container {
+    width: 0px;
+    height: 0px;
+}
